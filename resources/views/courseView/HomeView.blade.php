@@ -32,19 +32,19 @@
             <!-- Img item -->
             <div class="list">
                 <div class="item">
-                    <img src="{{asset('images/tải xuống.png')}}" alt="">
+                    <img src="{{asset('images/1.jpg')}}" alt="">
                 </div>
                 <div class="item">
-                    <img src="{{asset('images/tải xuống.png')}}" alt="">
+                    <img src="{{asset('images/2.jpg')}}" alt="">
                 </div>
                 <div class="item">
-                    <img src="{{asset('images/tải xuống.png')}}" alt="">
+                    <img src="{{asset('images/3.jpg')}}" alt="">
                 </div>
                 <div class="item">
-                    <img src="{{asset('images/tải xuống.png')}}" alt="">
+                    <img src="{{asset('images/4.jpg')}}" alt="">
                 </div>
                 <div class="item">
-                    <img src="{{asset('images/tải xuống.png')}}" alt="">
+                    <img src="{{asset('images/5.jpg')}}" alt="">
                 </div>
             </div>
             <!-- Ti right and left button -->

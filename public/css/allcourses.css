@@ -1,0 +1,278 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+}
+
+/* sidebar */
+.menu-bar{
+    left: 0;
+    height: 498px;
+    /*width: 12%;*/
+    position: fixed;
+    width: 110px;
+}
+.menu-bar ul{
+    padding-left: 30px;
+    padding-top: 32px;
+}
+.menu-bar li{
+    height: 80px;
+    width: 80px;    
+    list-style: none;    
+    padding: 4px 12px 4px;    
+    display: flex;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu-bar li:hover{
+    background-color: #E1E0E0;
+}
+
+.menu-bar li a{ 
+    text-decoration: none;
+    margin: 0 auto;
+    color: black;
+    line-height: 28px;
+    /* vertically align center */
+    display: flex;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.menu-bar i{
+    font-size: 26px;
+}
+.menu-bar .text{
+    font-size: 14px;
+    
+}
+
+/* main content 
+
+.main-content {
+    padding-top: 24px;
+    margin-left: 160px;   
+}
+*/
+.main-content h3{
+    font-size: 37px;
+    font-family: "Alfa Slab One", sans-serif;
+    font-weight: 400;
+    
+}
+.main-content p{
+    font-family: "Roboto", sans-serif;
+    padding-top: 8px;
+    font-weight: 400;
+    line-height: 18.75px;
+    font-size: 15.5px;
+}
+.main-content h4{
+    padding-top: 10px;
+    font-family: "Alfa Slab One", sans-serif;
+    font-size: 19px;
+}
+.main-content #chapter{
+    font-size: 14px;
+    padding: 10px 0px
+}
+
+
+/*Slide show*/
+.swiper{
+    margin: 12px 0;
+    width: 892px;
+    border-radius: 8px;
+}
+.wrapper{
+    border-radius: 8px;
+    width: 100%;
+}
+.wrapper, .slide .image{
+    height: 320px;
+    width: 100%;
+}
+.slide .image{
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* Drop down list */
+.accordion{
+    /* width: 808px; */
+    width: 808px;
+}
+
+.accordion .contentBx .label{
+    position: relative;
+    height: 56px;
+    width: 808px;
+    padding: 0px 22px;
+    background: #BDEBCF;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: 6px;
+    
+}
+
+
+.accordion .contentBx .label i{
+    font-size: 24px;
+    margin-right: 10px;
+    transition: 0.4s;
+}
+
+.accordion .contentBx.active .label i {
+    transform: rotate(45deg); 
+    transition: 0.4s;
+}
+
+.icon-title {
+    display: flex;
+    align-items: center;
+  }
+
+.accordion .contentBx .content{
+    display: flex;
+    align-items: center;
+    height: 0;
+    width: 808px;
+    overflow: hidden;
+    background-color: #BDEBCFB2;
+    padding-left: 30px;
+    padding-right: 22px;
+    cursor: pointer;
+    justify-content: space-between;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+
+.accordion .contentBx .content i{
+    font-size: 24px;
+    padding-right: 10px;
+}
+.accordion .contentBx.active .content{
+    height: 56px;
+    display: flex;
+    align-items: center;
+    transition: 0.4s;
+    margin-top: 4px;
+    
+}
+
+/* right side bar */
+.sidebar-right{
+    height:100%;
+    margin-left: 24px;
+    margin-right: 8px;
+    
+    float: right;
+    
+}
+
+.signup-course{
+    width: 100%;
+    padding-top: 30px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.5;
+}
+.signup-course img{
+    border-radius: 12px;
+    
+}
+.signup-course h3{
+    font-family: "Alfa Slab One";
+    font-size: 26px;
+}
+
+.signup-course button{
+    width: 184px;
+    height: 40px;
+    background-color: #4DABE4;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+.detail{
+    width: 100%;
+    padding: 20px 20px;
+}
+
+.detail ul li{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    line-height: 2.5;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+.detail ul li i{
+    padding-right: 12px;
+    font-size: 24px;
+}
+/*
+
+@media only screen and (max-width: 1620px){
+    .accordion,
+    .accordion .contentBx .label, 
+    .accordion .contentBx .content{
+        width: 808px;
+    }
+}
+
+
+@media only screen and (max-width: 1080px) {
+    
+    .accordion{
+        width: 100%;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-content{
+        margin-left:120px;
+        width: 80%;
+    }
+    
+    .accordion .contentBx .label, 
+    .accordion .contentBx .content{
+        width: 100%;
+    }
+    .sidebar-right{
+        margin-left: 120px;
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 720px){
+    .wrapper, .slide .image{
+      height: 280px;  
+    }
+    .signup-course img{
+        width: 60%;
+        height: 60%;
+    }
+}
+*/
+ 
