@@ -48,5 +48,6 @@ class CoursepageController extends Controller
     //Resume Learning View
     public function ResumeLearningView(){
         //Nhận id từ route 
+        return view('courseView.ResumeLearningView');
     }
 }

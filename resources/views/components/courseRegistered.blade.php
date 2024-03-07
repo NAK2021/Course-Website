@@ -1,7 +1,7 @@
 
 {{-- Item 1 (Registered) --}}
-<div class="col-md-2 col-sm-6" style="padding-left: 0; padding-top: 25px">
-    <div class="card border-0" style="width: 24rem; borde: none">
+<div class="card_item" style="padding-left: 0; padding-top: 25px">
+    <div class="card border-0" style="width: 24rem; border: none">
         <div class="card-img-top card-top" >
             <div class="label label-default">Beginner</div>
             <img class = "course-icon" src="{{ asset('/images/iconword-bigger.png') }}" alt="">

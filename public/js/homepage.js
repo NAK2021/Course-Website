@@ -1,8 +1,21 @@
 // Test
-
-
-// Drop Down menu 
-document.addEventListener("DOMContentLoaded", function () {
+// Search Bar// Search Bar
+// Search Bar
+// Search Bar
+$('input').on('focusin', function() {
+    $(this).parent().find('label').addClass('active');
+  });
+  $('input').on('focusout', function() {
+    if (!this.value) {
+      $(this).parent().find('label').removeClass('active');
+    }
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    // Lấy thẻ input và modal content
+    const input = document.getElementById('input');
+    const modalContent = document.querySelector('.modal-content');
+    // Lấy tất cả các card-item
+    const cardItems = document.querySelectorAll('.card-item');
     // Lấy các phần tử dropdown và dropdown_menu
     var Notidropdown = document.querySelector(".bellIcon");
     var NotidropdownMenu = document.querySelector(".notiBox_menu");
@@ -19,6 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
         NotidropdownMenu.style.display = (NotidropdownMenu.style.display === "block") ? "none" : "block";
         // Ẩn dropdown menu của profile (nếu đang hiển thị)
         hideDropdownMenu(dropdownMenu);
+        // Ẩn các card-item khi dropdown menu được mở
+        hideCardItems();
     });
 
     // Thêm sự kiện click vào biểu tượng profile
@@ -26,8 +41,121 @@ document.addEventListener("DOMContentLoaded", function () {
         dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
         // Ẩn dropdown menu thông báo (nếu đang hiển thị)
         hideDropdownMenu(NotidropdownMenu);
+        // Ẩn các card-item khi dropdown menu được mở
+        hideCardItems();
     });
+
+    // Biến để lưu trạng thái của card-item
+    let cardItemsVisible = false;
+
+    // Sự kiện khi nhập vào input
+    input.addEventListener('input', function () {
+        // Kiểm tra nếu có nội dung trong input và modal content không có class 'expanded'
+        if (input.value.trim() !== '') {
+            // Thêm class 'expanded' cho modal content
+            modalContent.classList.add('expanded');
+            // Hiển thị các card-item
+            cardItems.forEach(function (cardItem) {
+                cardItem.style.display = 'block';
+            });
+            // Gán giá trị true cho biến cardItemsVisible
+            cardItemsVisible = true;
+        } else {
+            // Nếu không có nội dung trong input
+            if (!cardItemsVisible) {
+                // Nếu card-items không được hiển thị trước đó, không làm gì cả
+                return;
+            }
+            // Nếu card-items đã được hiển thị trước đó, ẩn chúng
+            modalContent.classList.remove('expanded');
+            cardItems.forEach(function (cardItem) {
+                cardItem.style.display = 'none';
+            });
+            // Gán giá trị false cho biến cardItemsVisible
+            cardItemsVisible = false;
+        }
+    });
+
+    // Sự kiện khi nhấn phím Esc
+    input.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            input.value = ''; // Xóa nội dung của input
+            // Ẩn modal và các card-item
+            modalContent.classList.remove('expanded');
+            cardItems.forEach(function (cardItem) {
+                cardItem.style.display = 'none';
+            });
+            // Gán giá trị false cho biến cardItemsVisible
+            cardItemsVisible = false;
+        }
+    });
+
+    // Modal Search Box
+    // Get the modal
+    var modal = document.getElementById("modalSearchBox");
+
+    // Get the button that opens the modal
+    var btn = document.querySelector(".search-box");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("closeBtn")[0];
+
+    // Ẩn các card-item khi modal được mở
+    function hideCardItems() {
+        if (input.value.trim() === '') {
+            cardItems.forEach(function (cardItem) {
+                cardItem.style.display = 'none';
+            });
+        }
+    }
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+        modal.style.animation = "slideDown 0.4s forwards"; // Apply slideDown animation
+        modal.style.display = "block";
+    }
+
+    // Hide Content of dropdown menu when the modal is Showed
+    btn.addEventListener("click", function () {
+        // Ẩn dropdown menu của profile (nếu đang hiển thị)
+        hideDropdownMenu(dropdownMenu);
+        // Ẩn dropdown menu thông báo (nếu đang hiển thị)
+        hideDropdownMenu(NotidropdownMenu);
+        hideCardItems(); // Ẩn các card-item
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.animation = "slideUp 0.4s forwards"; // Apply slideUp animation
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 400); // Delay closing the modal to match the animation duration
+        resetModal(); // Reset modal and card items
+    }
+
+    // Function to reset modal and card items
+    function resetModal() {
+        input.value = ''; // Set search box value to empty
+        // Ẩn modal và các card-item
+        modalContent.classList.remove('expanded');
+        cardItems.forEach(function (cardItem) {
+            cardItem.style.display = 'none';
+        });
+        // Gán giá trị false cho biến cardItemsVisible
+        cardItemsVisible = false;
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.animation = "slideUp 0.4s forwards"; // Apply slideUp animation
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 400); // Delay closing the modal to match the animation duration
+        }
+    }
 });
+// Search function for the card item in the modal
 
 
 // Content Couse && Course_item
@@ -67,9 +195,14 @@ let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let dots = document.querySelectorAll('.slider .dots li');
-
+let sliderWidth = document.querySelector('.slider').offsetWidth;
 let lengthItems = items.length - 1;
 let active = 0;
+// Thiết lập kích thước của mỗi ảnh trong slider bằng kích thước của slider
+items.forEach(item => {
+    item.style.width = sliderWidth + 'px';
+});
+
 next.onclick = function(){
     active = active + 1 <= lengthItems ? active + 1 : 0;
     reloadSlider();
@@ -94,7 +227,12 @@ dots.forEach((li, key) => {
          active = key;
          reloadSlider();
     })
-})
+})// Xử lý sự kiện resize để cập nhật lại kích thước của slider và ảnh
 window.onresize = function(event) {
+    sliderWidth = document.querySelector('.slider').offsetWidth;
+    // Thiết lập lại kích thước của mỗi ảnh trong slider bằng kích thước của slider
+    items.forEach(item => {
+        item.style.width = sliderWidth + 'px';
+    });
     reloadSlider();
 };

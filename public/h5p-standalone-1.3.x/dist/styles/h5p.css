@@ -165,7 +165,7 @@ div.h5p-fullscreen {
   /* Hack for IOS landscape / portrait */
   width: 10px;
   min-width: 100%;
-  *width: 100%;
+  width: 100%;
   /* End of hack */
   height: 100%;
   z-index: 10;
@@ -173,8 +173,12 @@ div.h5p-fullscreen {
   border: 0;
   display: block;
 }
+.h5p-iframe-wrapper{
+  background-color: white !important;
+}
 
 .h5p-content ul.h5p-actions {
+  visibility: hidden;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   overflow: hidden;

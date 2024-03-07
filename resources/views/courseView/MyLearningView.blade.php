@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <link rel="stylesheet" type="text/css" href="{{ url('/css/layout.css') }}" />
@@ -24,7 +25,7 @@
     <title>Document</title>
 </head>
 <body>
-    <main style="margin-left: 0px">
+    <main class="main_course" style="margin-left: 0px">
         <div class="title">
             Khóa học của tôi
         </div>
@@ -81,7 +82,8 @@
                 <i class="fa-solid fa-magnifying-glass search-icon" style="color: #000000;"></i>
             </div>
         </div>
-        <content class="row" style="gap: 17%">
+        <!-- Content Tag -->
+        <content class="row" >
             <x-courseRegistered/>
             <x-courseRegistered/>
             <x-courseRegistered/>
@@ -91,7 +93,7 @@
             <x-courseRegistered/>
             <x-courseRegistered/>
         </content>
-        {{-- <content class="notHavingCourse">
+        <!-- {{-- <content class="notHavingCourse">
             <div class="helper-pic">
                 <img src="{{asset('images/nothavingcourse.png')}}" width="106%" height="106%" alt="">
             </div>
@@ -111,13 +113,13 @@
                     </a> 
                 </button>
             </div>
-        </content> --}}
+        </content> --}} -->
         
     </main>
     
 </body>
 <script>
-    document.getElementById("main_content").style.width = "1300px";
+    // document.getElementById("main_content").style.width = "1300px";
 </script>
 </html>
 @endsection
