@@ -35,34 +35,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <!-- Menu bar 
-        <aside class="menu-bar">
-            <div class="menu">
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-trending-up'></i>
-                            <span class="text nav-text">Lộ trình</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-book-open' ></i>
-                            <span class="text nav-text">Bài viết</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/welcome">
-                            <i class='bx bx-phone'></i>
-                            <span class="text nav-text">Liên hệ</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-        -->
-        
+    <div class="container_hg">
         <!-- Main -->
         <div class="main-content">
             <main>

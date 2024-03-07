@@ -1,20 +1,23 @@
 
 
-
+.maindetail{
+  width: 100%;
+  left: 1%;
+}
 .detail {
-   
-    width: 1300px;
+
     height: 102.4rem;
+    
     position: relative;
-    overflow: hidden;
+   
+    display: flex;
     background-color: #ffffff;
   }
   .detail .video {
-      width: 850px;
+      width: 80%;
       height: 58.3rem;
-      position: absolute;
-      padding-top: 20px;
-    background-color: #ffffff;
+      padding-top: 5px;
+      background-color: #ffffff;
     }
     .detail .video .vdbaihoc{
       width: 848.8px;
@@ -120,17 +123,14 @@
   
   /*css phan bai giang*/
     .accordion{
-      width: 350px;
-      margin-left: 900px;
-      margin-top: 20px;
+      width: 100%;
+      margin-left: 3%;
+     
   }
-
-
-  
   .detail .accordion .contentBx .label{
     position: relative;
     height: 56px;
-    width: 350px;
+    /* width: 350px; */
     padding: 0px 22px;
     background: #BDEBCF;
     display: flex;
@@ -162,7 +162,7 @@
     display: flex;
     align-items: center;
     height: 0;
-    width: 350px;
+    /* width: 350px; */
     overflow: hidden;
     background-color: #BDEBCFB2;
     padding-left: 30px;

@@ -31,13 +31,14 @@
 </head>
 <body>
 
-    <main style="margin-left: 0px">
+    <main class="maindetail" >
         <!-- html detail huy -->
         <div class="detail">
+            <!-- div chua vd bai hoc -->
             <div class="video">
                 <!-- chèn vd -->
                 <div class="vdbaihoc">
-                         <x-interact-video/>
+                         <x-test-video/>
                 </div>
                         <!-- frame_2 btn chuyển bài -->
                 <div class="frame_2">
@@ -64,13 +65,6 @@
                         <div class="total-articles">3 bài</div>
                     </div>
                     
-                    <div class="content">
-                        <div class="icon-title">
-                            <i class='bx bx-award' ></i>
-                            <span>1.2_Giới thiệu</span>
-                        </div>
-                        <div class="total-articles">9:00</div>
-                    </div>
                     <div class="content">
                         <div class="icon-title">
                             <i class='bx bx-award' ></i>
@@ -118,9 +112,6 @@
                         </div>
                         <div class="total-articles">9:00</div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -145,7 +136,7 @@
         });
       </script>
 <script>
-    document.getElementById("main_content").style.width = "1300px";
+    
 </script>
 </html>
 @endsection
