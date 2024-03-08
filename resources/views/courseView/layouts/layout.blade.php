@@ -20,7 +20,8 @@
     {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> --}}
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     {{-- Include khi cần --}}
     {{-- <script type="text/javascript" src="{{asset('/js/homepage.js')}}" defer></script> --}}
 <body>
@@ -30,10 +31,15 @@
     <div id="logo">
         <img src="{{asset('images/415791565_1101418471001982_6189920452808394444_n.png')}}" alt="" class="logoImg" >
     </div>
-    <!-- Search Box -->
+        <!-- Search Box -->
           <!-- Search Bar -->
     <div class="container-input search-box">
-        <input id="input" type="search" placeholder="You're looking for?" name="query" class="SearchInput" value>
+        <!-- Search Icon -->
+     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16" style="left: 3%; position: relative;" >
+            <path class="searchIcon" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+     </svg>
+        <!-- Search Box -->
+    <input id="input" type="search" placeholder="You're looking for?" name="query" class="SearchInput" value>
     </div>
     <!-- Right - infomation -->
     <div class="subnav">
@@ -50,6 +56,7 @@
             </div>
         <!-- Shopping Box -->
         </div>
+      
       <!-- Notification -->
       <div class="notification_container">
              <!-- Bell Icon -->
@@ -291,17 +298,18 @@
             <!-- == FOOTER == -->
 <div id="footerPage">
     <footer>
-        <div class="container text-center text-md-left col-third">
+        <div class=" text-center text-md-left col-third">
           <div class="footer-wrap">
             <!-- Item 1 -->
             <div class="about">
                 <!-- Logo Icon -->
               <img src="{{asset('images/415791565_1101418471001982_6189920452808394444_n.png')}}" alt="" class="imgIcon">
-              <p class="text-muted py-4">
-                Digital experience is </br>always embedded in </br> a physical experience.
+              <div class="text-muted py-4 section">
+              <p class="revealUp">Digital experience is <br>always embedded in <br> a physical experience.</p>                
+            </div>
             </div>
             <!-- Item 2 -->
-            <div class="Service">
+            <div class="Service revealUp">
               <h6 class="fw-bold special_name">Services</h6>
               <p class="p10"><a href="">Web Hosting</a></p>
               <p class="p10"><a href="" >Domains</a></p>
@@ -310,7 +318,7 @@
               <p class="p10"><a href="">E-mail Hosting</a></p>
             </div>
             <!-- Item 3 -->
-            <div class="Follow_us">
+            <div class="Follow_us revealUp">
               <h6 class="fw-bold special_name">Follow Us</h6>
             <p class="p10">
                 <a href="">
@@ -338,7 +346,7 @@
             </p>
             </div>
             <!-- Item 4 -->
-            <div class="Contact">
+            <div class="Contact revealUp">
               <h6 class="fw-bold special_name">Contact Us</h6>
               <p class="p10"><a href="">@gmail.com</a></p>
             </div>

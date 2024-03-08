@@ -17,3 +17,23 @@ for(i = 0; i < accordion.length; i++){
         this.classList.toggle('active');
     })
 }
+var SwiperSlide = new Swiper(".mySwiper", {
+  spaceBetween: 10,
+  centeredSlides: true,
+    
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    clickable: true,
+    el: ".swiper-pagination",
+    type: "progressbar",
+    
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  
+});

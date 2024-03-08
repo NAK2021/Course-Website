@@ -56,6 +56,7 @@ $('input').on('focusin', function() {
             modalContent.classList.add('expanded');
             // Hiển thị các card-item
             cardItems.forEach(function (cardItem) {
+                cardItem.style.animation = "slideDown 1.5s forwards"; // Apply slideDown animation
                 cardItem.style.display = 'block';
             });
             // Gán giá trị true cho biến cardItemsVisible
@@ -104,6 +105,7 @@ $('input').on('focusin', function() {
     function hideCardItems() {
         if (input.value.trim() === '') {
             cardItems.forEach(function (cardItem) {
+                cardItem.style.animation = "slideUp 10s forwards"; // Apply slideDown animation
                 cardItem.style.display = 'none';
             });
         }
@@ -155,15 +157,22 @@ $('input').on('focusin', function() {
         }
     }
 });
-// Search function for the card item in the modal
-
+// Search Icon changes when the modal is opened
+function changeSearchIconColor(color) {
+    document.querySelector('.searchIcon').style.fill = color;
+}
+document.querySelector('.closeBtn').addEventListener('click', function() {
+    changeSearchIconColor('white');
+});
+document.querySelector('.search-box').addEventListener('click', function() {
+    changeSearchIconColor('black');
+});
 
 // Content Couse && Course_item
 const slider = document.querySelector('.content_course');
 let isDown = false;
 let startX;
 let scrollLeft ;
-
 slider.addEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
@@ -236,3 +245,45 @@ window.onresize = function(event) {
     });
     reloadSlider();
 };
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".revealUp").forEach(function (elem) {
+  ScrollTrigger.create({
+    trigger: elem,
+    start: "top 80%",
+    end: "bottom 20%",
+    markers: false,
+    onEnter: function () {
+      gsap.fromTo(
+        elem,
+        { y: 100, autoAlpha: 0 },
+        {
+          duration: 1.25,
+          y: 0,
+          autoAlpha: 1,
+          ease: "back",
+          overwrite: "auto"
+        }
+      );
+    },
+    onLeave: function () {
+      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+    },
+    onEnterBack: function () {
+      gsap.fromTo(
+        elem,
+        { y: -100, autoAlpha: 0 },
+        {
+          duration: 1.25,
+          y: 0,
+          autoAlpha: 1,
+          ease: "back",
+          overwrite: "auto"
+        }
+      );
+    },
+    onLeaveBack: function () {
+      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+    }
+  });
+});

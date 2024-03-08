@@ -254,6 +254,7 @@ html
   /* overflow: auto; */
 }
 /* Search Bar */
+
 .container-input {
   display: flex;
   position: absolute;
@@ -261,6 +262,7 @@ html
   left: 19%;
   width: 50%;
   z-index: 10000;
+  align-items: center;
 }
 .SearchInput {
   width:60%;
@@ -351,14 +353,14 @@ background-color: #f1f1f1;
   border-radius: 17px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 5s;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
   font-weight: bolder;
   color: black;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 5s ease, opacity 0.5s ease;
 
 }
 .card-item:hover {
@@ -632,7 +634,7 @@ background-color: #f1f1f1;
         transform-origin: top center;
         animation: slideDown 300ms 60ms ease-in-out forwards;
       }
-      
+      /* For SlideDown */
       @keyframes slideDown {
         0% {
           opacity: 0;
@@ -644,6 +646,7 @@ background-color: #f1f1f1;
           transform: translateY(0);
         }
       } 
+    
 .showAllcontent
 {
   align-items: center;
@@ -987,8 +990,18 @@ footer {
     margin-bottom: -23px;
     overflow: hidden;
 }
+.section
+{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.revealUp {
+  opacity: 0;
+  
+}
 footer .footer-wrap {
-    padding: 25px;
+    padding: 25px 40px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
@@ -1003,7 +1016,8 @@ footer .footer-wrap {
 }
 /* Item 1 */
 footer .footer-wrap h6 {
-    padding: 20px 0px;
+  padding: 20px 11px;
+
     font-weight: 900;
 }
 .about p 

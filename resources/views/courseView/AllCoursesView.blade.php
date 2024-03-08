@@ -17,21 +17,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   
-    {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> --}}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> --}} -->
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
     <script type="text/javascript" src="{{asset('/js/allcourses.js') }}" defer></script>
     <script type="text/javascript" src="{{asset('/js/homepage.js')}}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <!-- Icons -->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
 <body>
@@ -40,7 +39,7 @@
         <div class="main-content">
             <main>
                 <h3>Tên khóa học</h3>
-                <p>Giới thiệu về khóa học</p>
+                <p class="opacity_5">Giới thiệu về khóa học</p>
                 
                 <!-- Slideshow -->
                 <div class="swiper mySwiper">
@@ -50,6 +49,18 @@
                         </div>
                         <div class="slide swiper-slide">
                             <img src="{{asset('images/3.jpg')}}" alt="" class="image">
+                        </div>
+                        <div class="slide swiper-slide">
+                            <img src="{{asset('images/4.jpg')}}" alt="" class="image">
+                        </div>
+                        <div class="slide swiper-slide">
+                            <img src="{{asset('images/4.jpg')}}" alt="" class="image">
+                        </div>
+                        <div class="slide swiper-slide">
+                            <img src="{{asset('images/4.jpg')}}" alt="" class="image">
+                        </div>
+                        <div class="slide swiper-slide">
+                            <img src="{{asset('images/4.jpg')}}" alt="" class="image">
                         </div>
                         <div class="slide swiper-slide">
                             <img src="{{asset('images/4.jpg')}}" alt="" class="image">
@@ -141,8 +152,8 @@
         </div>
         
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
+   
+    <!-- <script>
         var swiper = new Swiper(".mySwiper", {
           spaceBetween: 10,
           centeredSlides: true,
@@ -163,6 +174,6 @@
           },
           
         });
-      </script>
+      </script> -->
 </html>
 @endsection
