@@ -11,20 +11,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Css File -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ url('/css/layout.css') }}" /> --}}
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/layout.css') }}" />
     <!-- Js File -->
     {{-- Include khi cần --}}
-    {{-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    --}}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> --}}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    
     {{-- Include khi cần --}}
-    {{-- <script type="text/javascript" src="{{asset('/js/homepage.js')}}" defer></script> --}}
-<body>
+    <script type="text/javascript" src="{{asset('/js/homepage.js')}}" defer></script>
+<body class = "body_big">
             <!-- == HEADER == -->
 <div id="header">
     <!-- Logo Icon -->
@@ -32,20 +33,20 @@
         <img src="{{asset('images/415791565_1101418471001982_6189920452808394444_n.png')}}" alt="" class="logoImg" >
     </div>
         <!-- Search Box -->
-          <!-- Search Bar -->
+          <!-- Search Bar (container của search) -->
     <div class="container-input search-box">
         <!-- Search Icon -->
-     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16" style="left: 3%; position: relative;" >
-            <path class="searchIcon" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-     </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16" style="left: 3%; position: relative;" >
+                <path class="searchIcon" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        </svg>
         <!-- Search Box -->
-    <input id="input" type="search" placeholder="You're looking for?" name="query" class="SearchInput" value>
+        <input id="input" type="search" placeholder="Tìm kiếm" name="query" class="SearchInput" value>
     </div>
     <!-- Right - infomation -->
     <div class="subnav">
         <!-- myCourse Button -->
         <a href="/course/mycourse" class="myCourse_btn">
-            <button class="btn bgrk#E2E2E2"> 
+            <button class="btn bgrk#E2E2E2" style="border-radius: 10px"> 
                 <span>Khóa học của tôi</span>
             </button>
         </a>
@@ -59,13 +60,14 @@
       
       <!-- Notification -->
       <div class="notification_container">
-             <!-- Bell Icon -->
+             <!-- Bell Icon (set event listner)-->
             <button class="bellIcon outlineNone" >
                 <svg viewBox="0 0 448 512" class="bell"><path d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg>
             </button>
             <!-- Notice Box -->
             <div class="notificaiont_box">
                 <div class="dropdow dropdown-1">
+                    {{-- Lấy container chứa thông báo --}}
                     <ul class="notiBox_menu notiBox_menu-1">
                         <header>
                         <p class="noticeBox_name">Thông báo</p>
@@ -95,11 +97,12 @@
         </div>
         <!-- Profile User -->
         <div class="user_container menu">
-            <!--User Avatar -->
+            <!--User Avatar (set eventlistener) -->
              <div class="profileAvatar">
                 <img src="{{asset('images/423221567_7135333573191069_509031383483258617_n.png')}}" alt="" class="AvaImg" >
                 <!-- Profile drop Down -->
             <div class="dropdown dropdown-1">
+                {{-- lấy container chứa profile --}}
                 <ul class="dropdown_menu dropdown_menu-1">
                  <li class="dropdown_item"><a href="">Trang Cá Nhân</a></li>
                  <li class="dropdown_item"><a href="">Danh Sách Yêu Thích</a></li>
@@ -110,7 +113,7 @@
             </div>
         </div>
     </div>    
-        <!-- Modal Box -->
+        <!-- Modal Box (container của suggestion) -->
         <div id="modalSearchBox" class="modalBox">
         <!-- Modal content -->
         <div class="modal-content ">
@@ -119,7 +122,7 @@
                 <!-- Close Button -->          
                 <button class="closeBtn outlineNone">
                 <i class="fa-solid fa-xmark closeIcon"></i>
-                    <span>Close</span>
+                    <span>Đóng</span>
                  </button>                 
             </div>
             <!-- Modal Body -->
@@ -246,7 +249,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="/course/allcourses">
                     <!-- Button 3 -->
                      <button class="menu_btn courseBtn outlineNone">
                         <!-- icon -->
@@ -305,11 +308,11 @@
                 <!-- Logo Icon -->
               <img src="{{asset('images/415791565_1101418471001982_6189920452808394444_n.png')}}" alt="" class="imgIcon">
               <div class="text-muted py-4 section">
-              <p class="revealUp">Digital experience is <br>always embedded in <br> a physical experience.</p>                
+              <p class="#">Digital experience is <br>always embedded in <br> a physical experience.</p>                
             </div>
             </div>
             <!-- Item 2 -->
-            <div class="Service revealUp">
+            <div class="Service ">
               <h6 class="fw-bold special_name">Services</h6>
               <p class="p10"><a href="">Web Hosting</a></p>
               <p class="p10"><a href="" >Domains</a></p>
@@ -318,7 +321,7 @@
               <p class="p10"><a href="">E-mail Hosting</a></p>
             </div>
             <!-- Item 3 -->
-            <div class="Follow_us revealUp">
+            <div class="Follow_us ">
               <h6 class="fw-bold special_name">Follow Us</h6>
             <p class="p10">
                 <a href="">
@@ -346,7 +349,7 @@
             </p>
             </div>
             <!-- Item 4 -->
-            <div class="Contact revealUp">
+            <div class="Contact ">
               <h6 class="fw-bold special_name">Contact Us</h6>
               <p class="p10"><a href="">@gmail.com</a></p>
             </div>

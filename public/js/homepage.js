@@ -2,6 +2,8 @@
 // Search Bar// Search Bar
 // Search Bar
 // Search Bar
+
+
 $('input').on('focusin', function() {
     $(this).parent().find('label').addClass('active');
   });
@@ -13,10 +15,12 @@ $('input').on('focusin', function() {
   document.addEventListener("DOMContentLoaded", function () {
     // Lấy thẻ input và modal content
     const input = document.getElementById('input');
+    //--> xử lý xuất hiện khung
     const modalContent = document.querySelector('.modal-content');
-    // Lấy tất cả các card-item
+    // Lấy tất cả các card-item --> xử lý xuất hiện suggest
     const cardItems = document.querySelectorAll('.card-item');
-    // Lấy các phần tử dropdown và dropdown_menu
+    
+    // Lấy các phần tử dropdown và dropdown_menu --> xử lý dropdown
     var Notidropdown = document.querySelector(".bellIcon");
     var NotidropdownMenu = document.querySelector(".notiBox_menu");
     var dropdown = document.querySelector(".profileAvatar");
@@ -154,6 +158,8 @@ $('input').on('focusin', function() {
             setTimeout(() => {
                 modal.style.display = "none";
             }, 400); // Delay closing the modal to match the animation duration
+            resetModal();
+            changeSearchIconColor('white');
         }
     }
 });
@@ -198,6 +204,9 @@ slider.addEventListener('mousemove', (e) => {
    const walk = (x - startX) * 2;
    slider.scrollLeft = scrollLeft - walk;
 });
+
+
+
 // Swiper slider changes
 let swiper = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
@@ -245,6 +254,7 @@ window.onresize = function(event) {
     });
     reloadSlider();
 };
+// Footer transition 
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray(".revealUp").forEach(function (elem) {
@@ -287,3 +297,4 @@ gsap.utils.toArray(".revealUp").forEach(function (elem) {
     }
   });
 });
+

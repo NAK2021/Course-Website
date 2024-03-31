@@ -155,7 +155,7 @@ html
   height: 75%; /* Chiều cao khi mở rộng */
 }
 .modal-header {
-  padding: 2px 16px;
+  padding: 2px 16px !important;
   border: none;
 }
 /* The Close Button */
@@ -250,7 +250,7 @@ html
   }
 }
 .modal-body {
-  padding: 2px 16px;
+  padding: 2px 16px !important;
   /* overflow: auto; */
 }
 /* Search Bar */
@@ -937,6 +937,7 @@ button {
 }
 .menu_btn{
   margin-left: -17px;
+  border-radius: 10px;
 }
 .menu_btn span 
 {
@@ -1004,8 +1005,8 @@ footer .footer-wrap {
     padding: 25px 40px;
     margin-bottom: 30px;
     display: flex;
-    justify-content: space-between;
-    gap: 50px;
+    /* justify-content: space-between; */
+    gap: 15.5% ;
     color:#fff;
 }
 .special_name
@@ -1047,4 +1048,14 @@ footer .footer-wrap .Service p, footer .footer-wrap .Follow_us p {
 cursor: pointer;  
 color: rgb(104, 232, 154);
 
+}
+.swal2-container{
+  /* overflow-y: scroll !important;   */
+  /* width: 150px; */
+  /* position: absolute; */
+  margin: 0px;
+}
+.swal2-confirm{
+  height: 80% !important;
+  width: 100% !important;
 }

@@ -10,7 +10,7 @@
             {{-- <div class="label label-default">Beginner</div>
             <img class = "course-icon" src="{{ asset('/images/iconword-bigger.png') }}" alt=""> --}}
             <div class="direction">
-                <a href="/list" style="text-decoration: none; border-radius: 40px;filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.5));">
+                <a href="/course/mycourse/1/1" style="text-decoration: none; border-radius: 40px;filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.5));">
                     <button class="btn btn-primary moreInfo" style="padding-left: 7px">
                         <div>Tiếp tục học</div>
                         <i class="fa-solid fa-angles-right"></i>

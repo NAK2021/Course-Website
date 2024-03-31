@@ -78,7 +78,12 @@ Route::post('/list/logout',[UserController::class, 'logout'])->middleware('auth'
 
 //login form
 Route::get('/list/login',[UserController::class, 'login'])->name('login')->middleware('guest');
+/*Reason to name the route: No hardcoded URLs
+Automatic encoding/decoding of params
+Prevents you from having a typo in the url
 
+Ex:<a href="{{ route('login') }}">Login</a>
+*/
 //login form
 Route::post('/list/authority',[UserController::class, 'authority'])->middleware('guest');
 
@@ -101,9 +106,17 @@ Route::get('/list/{listing}',[ListingController::class, 'show']);
 
 //Show create form 
 
+//Auth
+/* Auth::routes([
+    //If you dont include this this authentication wont work
+    'verify' => true;
+]) 
+
+*/
+
 //Website Course
 //Home Route
-Route::get('/course',[CoursepageController::class, 'HomeView']);
+Route::get('/course',[CoursepageController::class, 'HomeView']); //-->middleware('verified')
 //All Road Maps
 Route::get('/course/roadmaps',[CoursepageController::class, 'AllRoadMapsView']);
 //All Courses

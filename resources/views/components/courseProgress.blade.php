@@ -1,7 +1,7 @@
  {{-- Item 1 (Home Progress Notification) --}}
  <div class="card card-progress">
     {{-- when hover --}}
-    <a href="/list" style="text-decoration: none">
+    <a href="/course/mycourse/1/1" style="text-decoration: none">
       <div class="card-progress-hover" >
           <button class="btn btn-primary directBtn">
               <i class="fa-solid fa-arrow-right"></i>

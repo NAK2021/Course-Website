@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" type="text/css" href="{{ url('/css/layout.css') }}" />
+    {{-- <link rel="stylesheet" type="text/css" href="{{ url('/css/layout.css') }}" /> --}}
     <link rel="stylesheet" type="text/css" href="{{ url('/css/allcourses.css') }}" />
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -20,15 +20,18 @@
     <!-- {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> --}} -->
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="{{asset('/js/allcourses.js') }}" defer></script>
-    <script type="text/javascript" src="{{asset('/js/homepage.js')}}" defer></script>
+    <script type="text/javascript" src="{{asset('/js/detcourse.js') }}" defer></script>
+    {{-- <script type="text/javascript" src="{{asset('/js/homepage.js')}}" defer></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
      <!-- Icons -->
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
@@ -92,7 +95,20 @@
                             </div>
                             <div class="total-articles">9:00</div>
                         </div>
-                        
+                        <div class="content">
+                            <div class="icon-title">
+                                <i class='bx bx-award' ></i>
+                                <span>1. Giới thiệu</span>
+                            </div>
+                            <div class="total-articles">9:00</div>
+                        </div>
+                        <div class="content">
+                            <div class="icon-title">
+                                <i class='bx bx-award' ></i>
+                                <span>1. Giới thiệu</span>
+                            </div>
+                            <div class="total-articles">9:00</div>
+                        </div>
                     </div>
                     <div class="contentBx">
                         <div class="label">
@@ -114,7 +130,7 @@
                         <div class="label">
                             <div class="icon-title">
                                 <i class='bx bx-plus'></i>
-                                <span>2. Giới thiệu</span>
+                                <span>3. Giới thiệu</span>
                             </div>
                             <div class="total-articles">3 bài</div>
                         </div>
@@ -138,15 +154,16 @@
         <div class="sidebar-right">
             <div class="signup-course">
                 <img src="{{asset('images/tải xuống.png')}}">
-                <h3>Khóa học miễn phí</h3>
-                <button>Đăng kí học ngay</button>
+                <h3>Word cơ bản</h3>
+                <button class = "register-course"style="font-weight: 400"
+                onclick="CartOnclick(1)">Đăng kí học ngay</button>
             </div>   
             <div class="detail">
-                <ul>
-                    <li><i class='bx bx-book-open' ></i>Trình độ</li>
-                    <li><i class='bx bx-book-open' ></i>Tổng số bài</li>
-                    <li><i class='bx bx-book-open' ></i>Thời gian</li>
-                    <li><i class='bx bx-book-open' ></i>Địa điểm</li>
+                <ul class = "course-info1">
+                    <li><i class='bx bx-book-open' ></i>Trình độ: Beginner</li>
+                    <li><i class='bx bx-book-open' ></i>Tổng số bài: 9 bài</li>
+                    <li><i class='bx bx-book-open' ></i>Thời gian: 180 phút</li>
+                    <li><i class='bx bx-book-open' ></i>Chi phí: Miễn Phí</li>
                 </ul>
             </div>   
         </div>

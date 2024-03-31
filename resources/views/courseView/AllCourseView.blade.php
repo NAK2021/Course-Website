@@ -21,7 +21,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
     <script type="text/javascript" src="{{asset('/js/courseJS.js') }}"></script>
+    
     {{-- <script type="text/javascript" src="{{asset('/js/homepage.js')}}"></script> --}}
     
     <title>Document</title>
@@ -29,7 +31,7 @@
 <body>
     <main class="main_course" style="margin-left: 0px">
         <div class="title">
-            Khóa học của tôi
+            Khóa học
         </div>
         {{-- flex-direction: row --}}
         <div class="filter-search-container"> 
@@ -85,15 +87,15 @@
             </div>
         </div>
         <!-- Content Tag -->
-        <content class="row" >
-            <x-courseRegistered/>
-            <x-courseRegistered/>
-            <x-courseRegistered/>
-            <x-courseRegistered/>
-            <x-courseRegistered/>
-            <x-courseRegistered/>
-            <x-courseRegistered/>
-            <x-courseRegistered/>
+        <content class="row" style="margin-top: 36px !important; margin-left: -15px !important">
+            <x-courseNotRegistered/>
+            <x-courseNotRegistered/>
+            <x-courseNotRegistered/>
+            <x-courseNotRegistered/>
+            <x-courseNotRegistered/>
+            <x-courseNotRegistered/>
+            <x-courseNotRegistered/>
+            <x-courseNotRegistered/>
         </content>
         {{-- <content class="notHavingCourse">
             <div class="helper-pic">
@@ -120,5 +122,9 @@
     </main>
     
 </body>
+<script>
+    document.querySelector(".courseBtn").style.backgroundColor = "#68E89A";
+    document.querySelector(".courseBtn").style.pointerEvents = "none";
+</script>
 </html>
 @endsection

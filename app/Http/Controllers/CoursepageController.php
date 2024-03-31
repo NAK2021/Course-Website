@@ -29,12 +29,13 @@ class CoursepageController extends Controller
     public function AllCoursesView(){
         //Nhận filter - sort - search từ route
         //Call db và trả dữ liệu ở đây
-        return view('courseView.AllCoursesView');
+        return view('courseView.AllCourseView');
     }
 
     //Detail Subject View
     public function DetailCourseView(){
         //Nhận id từ route 
+        return view('courseView.DetailCoursesView');
     }
 
     //My Learning View

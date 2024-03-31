@@ -107,7 +107,7 @@
     height: 0;
     width: 80%;
     overflow: hidden;
-    background-color: #BDEBCFB2;
+    background-color: #cef7ddb2;
     padding-left: 30px;
     padding-right: 22px;
     cursor: pointer;
@@ -150,7 +150,7 @@
 }
 .signup-course img{
     border-radius: 12px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     
 }
 .signup-course h3{
@@ -185,4 +185,11 @@
 .detail ul li i{
     padding-right: 12px;
     font-size: 24px;
+}
+
+.register-course:hover{
+    background-color: #233574;
+}
+.active-registerBtn{
+    background-color: #398976 !important;
 }
